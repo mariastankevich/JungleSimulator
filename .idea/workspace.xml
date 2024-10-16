@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c086bf3-9b5b-458d-9c34-84f4a209a7d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cy/stankevich/entity/Bat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cy/stankevich/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cy/stankevich/util/Actions.java" afterDir="false" />
+    <list default="true" id="4c086bf3-9b5b-458d-9c34-84f4a209a7d9" name="Changes" comment="Week 3 Additional task">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +20,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mariastankevich"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mariastankevich/JungleSimulator.git",
+    "accountId": "6cd3ed06-e3a9-431c-aace-61ace9251a6e"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -48,7 +56,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "JungleSemulator",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/User1234/IdeaProjects/JungleSimulator/src/main/java/org/example/Main.java",
     "run.code.analysis.last.selected.profile": "pProject Default"
@@ -83,6 +91,30 @@
       <option name="presentableId" value="Default" />
       <updated>1728998998022</updated>
     </task>
+    <task id="LOCAL-00001" summary="Week 3 Additional task">
+      <option name="closed" value="true" />
+      <created>1729078297807</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729078297808</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Week 3 Additional task" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 3 Additional task" />
   </component>
 </project>
