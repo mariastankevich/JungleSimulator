@@ -2,7 +2,7 @@ package cy.stankevich.util;
 
 import cy.stankevich.entity.Bat;
 //до 100%
-//0-40//40%// 1.resting upside down in a cave during a day ==> power = + 50
+//0-40//40%// 1.resting upside down in a cave during a day ==> power = + 20
 //30-40//10%// 2.flying to another forest ==> power = - 10
 //40-50//10%// 3. flying away from a predator ==> power = - 20
 //50-70//10// 4. fighting ==> power = -30
@@ -12,8 +12,7 @@ import cy.stankevich.entity.Bat;
 // 80-85//5%// 7. water ==>  health = satudation * 4
 // 85-90//5%// 8.melon ==>  health = = satudation * 7
 // 90-95//5%// 9.seeds ==>  health = = satudation * 2
-// 90-100// 10. starving ==> health = satudation * -10, power= -10
-
+// 90-100// 10. starving ==> health = satudation * -10, power = -10
 
 public class Actions {
     public void startActivity(Bat bat) {
@@ -45,7 +44,7 @@ public class Actions {
     }
     private void rest(Bat bat) {
         int power = bat.getPower();
-        power = power + 50;
+        power = power + 20;
         if(power > 100){
             power = 100;
         }
@@ -54,7 +53,7 @@ public class Actions {
         }
         bat.setPower(power);
         checkPower(bat);
-        System.out.println("I rested in the dark cave. Feeling much better!\n\tPower is + 50 points. Total is " + bat.getPower());
+        System.out.println("I rested in the dark cave. Feeling much better!\n\tTotal health is " + bat.getHealth() + " points.\n\tPower became - 20 points and the total is " + bat.getPower());
     }
     private void flyingForest(Bat bat) {
         int power = bat.getPower();
@@ -67,7 +66,7 @@ public class Actions {
         }
         bat.setPower(power);
         checkPower(bat);
-        System.out.println("I was flying to another forest. Get tired!\n\tPower is - 10 points.Total is " + bat.getPower());
+        System.out.println("I was flying to another forest. Get tired!\n\tTotal health is " + bat.getHealth() + " points.\n\tPower became - 20 points and the total is " + bat.getPower());
     }
     private void flyingAway(Bat bat) {
         int power = bat.getPower();
@@ -80,7 +79,7 @@ public class Actions {
         }
         bat.setPower(power);
         checkPower(bat);
-        System.out.println("I was attackted, but I ran away.\n\tPower is - 10 points.Total is " + bat.getPower());
+        System.out.println("I was attackted, but I ran away.\n\tTotal health is " + bat.getHealth() + " points.\n\tPower became - 20 points and the total is " + bat.getPower());
     }
     private void fighting(Bat bat) {
         int power = bat.getPower();
@@ -93,7 +92,7 @@ public class Actions {
         }
         bat.setPower(power);
         checkPower(bat);
-        System.out.println("I was attackted, I was fighting bravly.\n\tPower is - 20 points and the total is " + bat.getPower());
+        System.out.println("I was attackted, I was fighting bravly.\n\tTotal health is " + bat.getHealth() + " points.\n\tPower became - 20 points and the total is " + bat.getPower());
     }
     private void injured(Bat bat) {
         int health = bat.getHealth();
@@ -105,7 +104,7 @@ public class Actions {
             health = 0;
         }
         bat.setHealth(health);
-        System.out.println("I was attackted, I was injured.\n\tHealth is - 50 points and the total is " + bat.getHealth());
+        System.out.println("I was attackted, I was injured.\n\tTotal health is " + bat.getHealth() + " points.\n\tPower became - 20 points and the total is " + bat.getPower());
     }
     private void eatMango(Bat bat) {
         int power = bat.getPower();
@@ -193,7 +192,7 @@ public class Actions {
         bat.setPower(power);
         bat.setHealth(health);
         checkPower(bat);
-        System.out.println("I ate some SEEDS!\n\tTotal health is " + bat.getHealth() + " points.\n\tPower became - 5 points and the total is " + bat.getPower());
+        System.out.println("I ate some SEEDS!\n\tTotal health is " + bat.getHealth() + " points.\n\tPower is - 5 points and the total is " + bat.getPower());
     }
     private void starve(Bat bat) {
         int power = bat.getPower();
@@ -205,7 +204,7 @@ public class Actions {
         if(power < 0){
             power = 0;
         }
-        health = health + (int) (bat.getSaturation()) * -10; // double transfer to int
+        health = health - (int) (bat.getSaturation()) * 100; // double transfer to int
         if(health > 100){
             health = 100;
         }
