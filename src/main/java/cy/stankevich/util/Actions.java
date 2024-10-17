@@ -2,41 +2,41 @@ package cy.stankevich.util;
 
 import cy.stankevich.entity.Bat;
 
-//0-40//40%// 1.resting upside down in a cave during a day ==> power = + 20
+//0-30//30%// 1.resting upside down in a cave during a day ==> power = + 20
 //30-40//10%// 2.flying to another forest ==> power = - 10
 //40-50//10%// 3. flying away from a predator ==> power = - 20
-//50-70//10// 4. fighting ==> power = -30
-//70-75//5%// 5. injured with a predator ==> health = -50
+//50-60//10%// 4. fighting ==> power = -30
+//60-65//5%// 5. injured with a predator ==> health = -50
 //6. feeding (eating or drinking) ==> power = -5
-// 75-80//5%// 6. mango ==> health = satudation * 6
-// 80-85//5%// 7. water ==>  health = satudation * 4
-// 85-90//5%// 8.melon ==>  health = = satudation * 7
-// 90-95//5%// 9.seeds ==>  health = = satudation * 2
-// 90-100// 10. starving ==> health = satudation * -10, power = -10
+// 65-70//5%// 6. mango ==> health = satudation * 6
+// 70-75//5%// 7. water ==>  health = satudation * 4
+// 75-80//5%// 8.melon ==>  health = = satudation * 7
+// 80-85//5%// 9.seeds ==>  health = = satudation * 2
+// 85-100//15% 10.starving ==> health = satudation * -10, power = -10
 
 public class Actions {
     public void startActivity(Bat bat) throws InterruptedException {
         while (isAlive(bat)) {
             int eventNumber = (int) (Math.random() * 100);
-            if(eventNumber >= 0 && eventNumber < 40) {
+            if(eventNumber >= 0 && eventNumber < 30) {
                 rest(bat);
-            } else if (eventNumber >= 40 && eventNumber < 50) {
+            } else if (eventNumber >= 30 && eventNumber < 40) {
                 flyingForest(bat);
-            } else if (eventNumber >= 50 && eventNumber < 60) {
+            } else if (eventNumber >= 40 && eventNumber < 50) {
                 flyingAway(bat);
-            }  else if (eventNumber >= 70 && eventNumber < 80) {
+            }  else if (eventNumber >= 50 && eventNumber < 60) {
                 fighting(bat);
-            } else if (eventNumber >= 80 && eventNumber < 85) {
+            } else if (eventNumber >= 60 && eventNumber < 65) {
                 injured(bat);
-            } else if (eventNumber >= 85 && eventNumber < 90) {
+            } else if (eventNumber >= 65 && eventNumber < 70) {
                 eatMango(bat);
-            } else if (eventNumber >= 80 && eventNumber < 85) {
+            } else if (eventNumber >= 70 && eventNumber < 75) {
                 drinkWater(bat);
-            } else if (eventNumber >= 85 && eventNumber < 90) {
+            } else if (eventNumber >= 75 && eventNumber < 80) {
                 eatMelon(bat);
-            } else if (eventNumber >= 90 && eventNumber < 95) {
+            } else if (eventNumber >= 80 && eventNumber < 85) {
                 eatSeeds(bat);
-            } else if (eventNumber >= 95 && eventNumber <= 100) {
+            } else if (eventNumber >= 85 && eventNumber <= 100) {
                 starve(bat);
             }
             Thread.sleep(1000); // Sleeps for 1000 milliseconds
