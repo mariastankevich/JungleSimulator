@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c086bf3-9b5b-458d-9c34-84f4a209a7d9" name="Changes" comment="trying to delete idea folder">
+    <list default="true" id="4c086bf3-9b5b-458d-9c34-84f4a209a7d9" name="Changes" comment="math random update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cy/stankevich/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cy/stankevich/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cy/stankevich/util/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cy/stankevich/util/Actions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +140,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729152673415</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="System.out.println corrections">
+      <option name="closed" value="true" />
+      <created>1729154632418</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729154632418</updated>
+    </task>
+    <task id="LOCAL-00008" summary="math random update">
+      <option name="closed" value="true" />
+      <created>1729155081625</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729155081625</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,7 +176,9 @@
     <MESSAGE value="added thread control in class Main and Actions" />
     <MESSAGE value="trying to delete idea folder 2" />
     <MESSAGE value="trying to delete idea folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to delete idea folder" />
+    <MESSAGE value="System.out.println corrections" />
+    <MESSAGE value="math random update" />
+    <option name="LAST_COMMIT_MESSAGE" value="math random update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

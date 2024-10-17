@@ -8,11 +8,11 @@ import cy.stankevich.entity.Bat;
 //50-60//10%// 4. fighting ==> power = -30
 //60-65//5%// 5. injured with a predator ==> health = -50
 //6. feeding (eating or drinking) ==> power = -5
-// 65-70//5%// 6. mango ==> health = satudation * 6
-// 70-75//5%// 7. water ==>  health = satudation * 4
-// 75-80//5%// 8.melon ==>  health = = satudation * 7
-// 80-85//5%// 9.seeds ==>  health = = satudation * 2
-// 85-100//15% 10.starving ==> health = satudation * -10, power = -10
+// 65-70//5%// 6. mango ==> health = saturation * 6
+// 70-75//5%// 7. water ==>  health = saturation * 4
+// 75-80//5%// 8.melon ==>  health = = saturation * 7
+// 80-85//5%// 9.seeds ==>  health = = saturation * 2
+// 85-100//15% 10.starving ==> health = saturation * -10, power = -10
 
 public class Actions {
     public void startActivity(Bat bat) throws InterruptedException {
@@ -80,7 +80,7 @@ public class Actions {
         }
         bat.setPower(power);
         checkPower(bat);
-        System.out.println("I was attackted, but I ran away.\n\tHealth 0 points, Total is " + bat.getHealth() + " points.\n\tPower -10 points, and Total is " + bat.getPower() + " points.");
+        System.out.println("I was attacked, but I ran away.\n\tHealth 0 points, Total is " + bat.getHealth() + " points.\n\tPower -10 points, and Total is " + bat.getPower() + " points.");
     }
     private void fighting(Bat bat) {
         int power = bat.getPower();
@@ -93,7 +93,7 @@ public class Actions {
         }
         bat.setPower(power);
         checkPower(bat);
-        System.out.println("I was attackted, I was fighting bravly.\n\tHealth 0 points, Total is " + bat.getHealth() + " points.\n\tPower -20 points, Total is " + bat.getPower() + " points.");
+        System.out.println("I was attacked, I was fighting bravely.\n\tHealth 0 points, Total is " + bat.getHealth() + " points.\n\tPower -20 points, Total is " + bat.getPower() + " points.");
     }
     private void injured(Bat bat) {
         int health = bat.getHealth();
@@ -105,7 +105,7 @@ public class Actions {
             health = 0;
         }
         bat.setHealth(health);
-        System.out.println("I was attackted, I was injured.\n\tHealth -50 points, Total is " + bat.getHealth() + " points.\n\tPower -20 points, Total is " + bat.getPower() + " points.");
+        System.out.println("I was attacked, I was injured.\n\tHealth -50 points, Total is " + bat.getHealth() + " points.\n\tPower -20 points, Total is " + bat.getPower() + " points.");
     }
     private void eatMango(Bat bat) {
         int power = bat.getPower();
