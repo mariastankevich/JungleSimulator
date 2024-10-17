@@ -4,7 +4,7 @@ package cy.stankevich.entity;
 // saturation
 public class Bat {
     public int health = 100;
-    private int power = 100;
+    public int power = 100;
     private final double saturation = 2.5; // can't be changed
 
     public void setHealth(int health) { // pass data to health

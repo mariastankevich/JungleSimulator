@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c086bf3-9b5b-458d-9c34-84f4a209a7d9" name="Changes" comment="typos correction">
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/TEST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cy/stankevich/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cy/stankevich/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cy/stankevich/util/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cy/stankevich/util/Actions.java" afterDir="false" />
+    <list default="true" id="4c086bf3-9b5b-458d-9c34-84f4a209a7d9" name="Changes" comment="notes to check calculations">
+      <change beforePath="$PROJECT_DIR$/src/main/java/cy/stankevich/entity/Bat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cy/stankevich/entity/Bat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729155413408</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="notes to check calculations">
+      <option name="closed" value="true" />
+      <created>1729160043764</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729160043764</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,7 +194,8 @@
     <MESSAGE value="System.out.println corrections" />
     <MESSAGE value="math random update" />
     <MESSAGE value="typos correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="typos correction" />
+    <MESSAGE value="notes to check calculations" />
+    <option name="LAST_COMMIT_MESSAGE" value="notes to check calculations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
