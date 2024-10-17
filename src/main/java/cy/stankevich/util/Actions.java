@@ -53,8 +53,8 @@ public class Actions {
             power = 0;
         }
         bat.setPower(power);
-        checkPower(bat);
-        System.out.println("I rested in the dark cave. Feeling much better!\n\tHealth 0 points, Total is " + bat.getHealth() + " points.\n\tPower +20 points, Total is " + bat.getPower() + " points.");
+        damageHealth(bat);
+        System.out.println("I rested in the dark cave. Feeling much better!\n\tHealth +/-0 points, Total is " + bat.getHealth() + " points.\n\tPower +20 points, Total is " + bat.getPower() + " points.");
     }
     private void flyingForest(Bat bat) {
         int power = bat.getPower();
@@ -66,8 +66,8 @@ public class Actions {
             power = 0;
         }
         bat.setPower(power);
-        checkPower(bat);
-        System.out.println("I was flying to another forest. Get tired!\n\tHealth 0 points, Total is " + bat.getHealth() + " points.\n\tPower -10 points, Total is " + bat.getPower() + " points.");
+        damageHealth(bat);
+        System.out.println("I was flying to another forest. Get tired!\n\tHealth +/-0 points, Total is " + bat.getHealth() + " points.\n\tPower -10 points, Total is " + bat.getPower() + " points.");
     }
     private void flyingAway(Bat bat) {
         int power = bat.getPower();
@@ -79,8 +79,8 @@ public class Actions {
             power = 0;
         }
         bat.setPower(power);
-        checkPower(bat);
-        System.out.println("I was attacked, but I ran away.\n\tHealth 0 points, Total is " + bat.getHealth() + " points.\n\tPower -10 points, and Total is " + bat.getPower() + " points.");
+        damageHealth(bat);
+        System.out.println("I was attacked, but I ran away.\n\tHealth +/-0 points, Total is " + bat.getHealth() + " points.\n\tPower -10 points, and Total is " + bat.getPower() + " points.");
     }
     private void fighting(Bat bat) {
         int power = bat.getPower();
@@ -92,8 +92,8 @@ public class Actions {
             power = 0;
         }
         bat.setPower(power);
-        checkPower(bat);
-        System.out.println("I was attacked, I was fighting bravely.\n\tHealth 0 points, Total is " + bat.getHealth() + " points.\n\tPower -20 points, Total is " + bat.getPower() + " points.");
+        damageHealth(bat);
+        System.out.println("I was attacked, I was fighting bravely.\n\tHealth +/-0 points, Total is " + bat.getHealth() + " points.\n\tPower -20 points, Total is " + bat.getPower() + " points.");
     }
     private void injured(Bat bat) {
         int health = bat.getHealth();
@@ -126,7 +126,7 @@ public class Actions {
         }
         bat.setPower(power);
         bat.setHealth(health);
-        checkPower(bat);
+        damageHealth(bat);
         System.out.println("I ate MANGO. Yummy!\n\tHealth +15 points, Total is " + bat.getHealth() + " points.\n\tPower -5 points, Total is " + bat.getPower() + " points.");
     }
     private void drinkWater(Bat bat) {
@@ -148,7 +148,7 @@ public class Actions {
         }
         bat.setPower(power);
         bat.setHealth(health);
-        checkPower(bat);
+        damageHealth(bat);
         System.out.println("I drank some water!\n\tHealth +10 points, Total is " + bat.getHealth() + " points.\n\tPower -5 points, Total is " + bat.getPower() + " points.");
     }
     private void eatMelon(Bat bat) {
@@ -170,7 +170,7 @@ public class Actions {
         }
         bat.setPower(power);
         bat.setHealth(health);
-        checkPower(bat);
+        damageHealth(bat);
         System.out.println("I ate big MELON!\n\tHealth +35 points, Total is " + bat.getHealth() + " points.\n\tPower -5 points, Total is " + bat.getPower() + " points.");
     }
     private void eatSeeds(Bat bat) {
@@ -192,7 +192,7 @@ public class Actions {
         }
         bat.setPower(power);
         bat.setHealth(health);
-        checkPower(bat);
+        damageHealth(bat);
         System.out.println("I ate some SEEDS!\n\t Health +5 points, Total is " + bat.getHealth() + " points.\n\tPower -5 points, Total is " + bat.getPower() + " points.");
     }
     public void starve(Bat bat) {
@@ -215,7 +215,7 @@ public class Actions {
         bat.setHealth(health);
         // checkPoints(bat);
         bat.setPower(power);
-        checkPower(bat);
+        damageHealth(bat);
         System.out.println("I am hungry!\n\tHealth is -25 points,Total " + bat.getHealth() + " points.\n\tPower -10 points, Total is " + bat.getPower() + " points.");
     }
     private boolean isAlive(Bat bat) { // TRUE = is alive to continue
@@ -225,7 +225,7 @@ public class Actions {
             return true;
         }
     }
-    private void checkPower(Bat bat) {
+    private void damageHealth(Bat bat) { // when 0 power the health should get -5 points.
         if(bat.getPower() <= 0) {
             int health = bat.getHealth();
             health = health - 5;
