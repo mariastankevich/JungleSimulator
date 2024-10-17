@@ -3,9 +3,9 @@ package cy.stankevich.entity;
 // from => 0 to <=100 POWER points - going down via activities, going up via rest
 // saturation
 public class Bat {
-    private int health = 100;
+    public int health = 100;
     private int power = 100;
-    private final double saturation = 3.5; // can't be changed
+    private final double saturation = 2.5; // can't be changed
 
     public void setHealth(int health) { // pass data to health
         this.health = health;

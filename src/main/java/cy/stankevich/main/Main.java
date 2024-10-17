@@ -8,7 +8,10 @@ public class Main {
         System.out.println("Hi, I am Harry - the bat. You can call me Batman! Boo");
         Bat bat = new Bat();
         Actions actions = new Actions();
-        actions.startActivity(bat);
-
+        try {
+            actions.startActivity(bat);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

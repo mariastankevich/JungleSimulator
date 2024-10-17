@@ -1,6 +1,8 @@
 package cy.stankevich.util;
 
 import cy.stankevich.entity.Bat;
+
+import java.time.Duration;
 //до 100%
 //0-40//40%// 1.resting upside down in a cave during a day ==> power = + 20
 //30-40//10%// 2.flying to another forest ==> power = - 10
@@ -15,7 +17,7 @@ import cy.stankevich.entity.Bat;
 // 90-100// 10. starving ==> health = satudation * -10, power = -10
 
 public class Actions {
-    public void startActivity(Bat bat) {
+    public void startActivity(Bat bat) throws InterruptedException {
         while (checkHealth(bat)) {
             int eventNumber = (int) (Math.random() * 100);
             if(eventNumber >= 0 && eventNumber < 40) {
@@ -39,6 +41,7 @@ public class Actions {
             } else if (eventNumber >= 95 && eventNumber <= 100) {
                 starve(bat);
             }
+            Thread.sleep(1000);
         }
         System.out.println("=Sad music= Poor Harry the bat is dad (= ");
     }
@@ -194,7 +197,7 @@ public class Actions {
         checkPower(bat);
         System.out.println("I ate some SEEDS!\n\tTotal health is " + bat.getHealth() + " points.\n\tPower is - 5 points and the total is " + bat.getPower());
     }
-    private void starve(Bat bat) {
+    public void starve(Bat bat) {
         int power = bat.getPower();
         int health = bat.getHealth();
         power = power - 10;
@@ -204,15 +207,10 @@ public class Actions {
         if(power < 0){
             power = 0;
         }
-        health = health - (int) (bat.getSaturation()) * 100; // double transfer to int
-        if(health > 100){
-            health = 100;
-        }
-        if(health < 0){
-            health = 0;
-        }
-        bat.setPower(power);
+        health = health - (int) (bat.getSaturation()) * 10; // double transfer to int
         bat.setHealth(health);
+        checkPoints(bat); //???????????
+        bat.setPower(power);
         checkPower(bat);
         System.out.println("I am hungry!\n\tTotal health is " + bat.getHealth() + " points.\n\tPower became - 10 points and the total is " + bat.getPower());
     }
@@ -232,5 +230,11 @@ public class Actions {
             }
             bat.setHealth(health);
         }
+    }
+    private static void checkPoints(Bat bat) {
+        if (bat.health > 100);
+        bat.health = 100;
+        if (bat.health < 0);
+        bat.health = 0;
     }
 }
